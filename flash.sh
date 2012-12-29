@@ -226,6 +226,10 @@ case "$DEVICE" in
 "otoro"|"unagi")
 	flash_fastboot nounlock $PROJECT
 	;;
+	
+"primoc")
+	flash_fastboot unlock $PROJECT
+	;;
 
 "panda")
 	flash_fastboot unlock $PROJECT
