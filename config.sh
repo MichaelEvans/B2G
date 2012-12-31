@@ -29,7 +29,7 @@ case `uname` in
 esac
 
 GITREPO=${GITREPO:-"git://github.com/MichaelEvans/b2g-manifest"}
-BRANCH=${BRANCH:-primoc}
+BRANCH=${BRANCH:-nexus4}
 
 GIT_TEMP_REPO="tmp_manifest_repo"
 if [ -n "$2" ]; then
@@ -54,6 +54,11 @@ case "$1" in
 	repo_sync $1
 	;;
 	
+"nexus-4")
+	echo DEVICE=mako >> .tmp-config &&
+	repo_sync $1
+	;;
+		
 "galaxy-s2")
 	echo DEVICE=galaxys2 >> .tmp-config &&
 	repo_sync $1
